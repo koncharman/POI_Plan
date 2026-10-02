@@ -10,5 +10,7 @@ OLLAMA models
 # OLLAMA
 You need ollama to run the application
 Two models were used:
-'''ollama pull llama3.2:3b '''
-'''ollama pull nomic-embed-text '''
+```bash
+ollama pull llama3.2:3b 
+ollama pull nomic-embed-text
+```
