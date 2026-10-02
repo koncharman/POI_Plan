@@ -1,0 +1,109 @@
+<mxfile host="Electron">
+  <diagram name="Σελίδα-1" id="EQjKBI93lmhUXlQMuDKk">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B82N-uPSJD0-qdBddHQg-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;File&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;main&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="287" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Function&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;initialize_main_data&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Load Main data: POIs, Tags, Fixtures, API_key&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="241" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Function&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;initialize_embeddings&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Loads embedding used for rag, vector stores for docouments and tags&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="241" x="287" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Function&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;initialize_structured_llm&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;Loads LLMs used in the application&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="241" x="564" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-19" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Tab1 - Extraction" vertex="1">
+          <mxGeometry height="280" width="289.5" x="10" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-20" parent="B82N-uPSJD0-qdBddHQg-19" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Analyze user input&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="260.5" x="9.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-21" parent="B82N-uPSJD0-qdBddHQg-19" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Shows POIs and Tags found using Rag&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="260.5" x="9.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-25" parent="B82N-uPSJD0-qdBddHQg-19" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Shows Date, Time and Range found Found In Text&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="260.5" x="9.5" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-24" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Streamlit APP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="337" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-26" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Tab2 - Planning" vertex="1">
+          <mxGeometry height="280" width="241" x="313" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-27" parent="B82N-uPSJD0-qdBddHQg-26" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Input: list of POIs, Time, Duration, Weekday, NO Stops&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="220" x="9.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-29" parent="B82N-uPSJD0-qdBddHQg-26" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Output: List of Plans&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="9.5" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-31" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Tab3 - Weather" vertex="1">
+          <mxGeometry height="280" width="241" x="568" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-32" parent="B82N-uPSJD0-qdBddHQg-31" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Input: A POI, Date, Time&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="220" x="9.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-33" parent="B82N-uPSJD0-qdBddHQg-31" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Output: Hourly Check For Rain using API&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="9.5" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-34" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Tab4 - Full Conversation" vertex="1">
+          <mxGeometry height="350" width="774" x="23.5" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-35" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Recieve First Input&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="260.5" x="9.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-36" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Filter Potential List of POIs based on preference and RAG&lt;/span&gt;" vertex="1">
+          <mxGeometry height="110" width="260.5" x="9.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-39" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Create Plans&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="260.5" x="9.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-40" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Recieve New Input&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="260.5" x="493.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-41" edge="1" parent="B82N-uPSJD0-qdBddHQg-34" source="B82N-uPSJD0-qdBddHQg-35" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="B82N-uPSJD0-qdBddHQg-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="326.5" y="70" as="sourcePoint" />
+            <mxPoint x="376.5" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-42" edge="1" parent="B82N-uPSJD0-qdBddHQg-34" source="B82N-uPSJD0-qdBddHQg-36" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="B82N-uPSJD0-qdBddHQg-39" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="146.5" y="90" as="sourcePoint" />
+            <mxPoint x="146.5" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-43" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Filter Potential List of POIs based on preference and RAG&lt;/span&gt;" vertex="1">
+          <mxGeometry height="110" width="260.5" x="493.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-44" edge="1" parent="B82N-uPSJD0-qdBddHQg-34" source="B82N-uPSJD0-qdBddHQg-40" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="B82N-uPSJD0-qdBddHQg-43" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="273.5" y="90" as="sourcePoint" />
+            <mxPoint x="273.5" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-45" parent="B82N-uPSJD0-qdBddHQg-34" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Create New Plans&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="260.5" x="493.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-46" edge="1" parent="B82N-uPSJD0-qdBddHQg-34" source="B82N-uPSJD0-qdBddHQg-43" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="B82N-uPSJD0-qdBddHQg-45" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="582.61" y="220" as="sourcePoint" />
+            <mxPoint x="573.75" y="258.38" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-47" edge="1" parent="B82N-uPSJD0-qdBddHQg-34" source="B82N-uPSJD0-qdBddHQg-36" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="B82N-uPSJD0-qdBddHQg-43" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="166.5" y="230" as="sourcePoint" />
+            <mxPoint x="166.5" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B82N-uPSJD0-qdBddHQg-48" parent="B82N-uPSJD0-qdBddHQg-34" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Filter&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Pois&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="93.5" x="340.25" y="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
