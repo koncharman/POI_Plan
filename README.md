@@ -17,32 +17,29 @@ ollama pull nomic-embed-text
 # Flow
 ```mermaid
 flowchart TD
-POI['Name;Area;Tags;Category;Family Friendly;Visit Time;Indoor/Outdoor/Mixed']
-POI -> VS['Vector Stores']
+    POI["POI Data<br>(Name; Area; Tags; Category; Family Friendly; Visit Time; Indoor/Outdoor/Mixed)"]
+    POI --> VS["Vector Stores"]
 
-IN ['User Input']
+    IN["User Input"]
+    IN --> EE["Entity Extraction"]
 
-IN -> EE['Entity Extraction']
+    EE --> DT["Date, Weekday, Duration, No Stops, and Time Extraction"]
+    EE --> RAG["RAG based on POIs Names and Tags"]
+    VS --> RAG
 
-EE -> DT["Date, Weekday, Duration, No Stops, and Time Extraction"]
+    RAG --> FT_DR["Requested POIs"]
+    RAG --> FT_RR["Account for raining (if requested)"]
+    RAG --> FT_FF["Account for family friendly POIs (if requested)"]
+    RAG --> FT_IO["Account for indoor or outdoor settings (if requested)"]
 
+    FT_DR --> FP["Filtered POIs"]
+    FT_RR --> FP
+    FT_FF --> FP
+    FT_IO --> FP
 
-EE -> RAG["Rag based on POIs Names and Tags"]
-VS -> RAG
+    FP --> CP["Plan Creation"]
+    DT --> CP
 
-RAG -> FT_DR['Requested POIs']
-RAG -> FT_RR['Acount for raining (if requested)']
-RAG -> FT_FF['Account for family friendly POIs (if requested)']
-RAG -> FT_IO['Account for indoor or outdoor settings (if requested)']
-
-FT_DR -> FP['Filtered POIs']
-FT_RR -> FP
-FT_FF -> FP
-FT_IO -> FP
-
-FP -> CP['Plan Creation']
-DT -> CP
-
-CP -> UO['User Output (List of Plans)']
-
+    CP --> UO["User Output (List of Plans)"]
 ```
+
