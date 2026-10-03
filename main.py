@@ -54,6 +54,7 @@ def initialize_embeddings():
     if os.path.exists("./chroma_poi"):
         shutil.rmtree("./chroma_poi", ignore_errors=True)
 
+
     embeddings = OllamaEmbeddings(
         model="nomic-embed-text",
         base_url="http://localhost:11434"
@@ -197,7 +198,7 @@ with tab1:
     text = st.text_area(
         "Instructions",
         height=180,
-        placeholder="I want to see art and museums, on Monday, 28 October, 2026"
+        placeholder="I want to see art and museums, on Monday, 28 October, 2026 from 15:00 - 19:00"
     )
 
     if st.button(
