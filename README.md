@@ -7,6 +7,11 @@ ChromaDB for vector databases
 LangChain for embeddings and LLM integration
 OLLAMA models
 
+# Install Requirements
+```bash
+pip install -r requirements.txt
+```
+
 # OLLAMA
 You need ollama to run the application
 Two models were used:
@@ -42,4 +47,3 @@ flowchart TD
 
     CP --> UO["User Output (List of Plans)"]
 ```
-
