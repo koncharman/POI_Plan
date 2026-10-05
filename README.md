@@ -19,6 +19,14 @@ Two models were used:
 ollama pull llama3.2:3b 
 ollama pull nomic-embed-text
 ```
+
+# Application
+After installing the above requirements, you can run the streamlit application.
+```bash
+streamlit run main.py
+```
+
+
 # Flow
 ```mermaid
 flowchart TD
