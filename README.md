@@ -11,7 +11,7 @@ RAG: Retrieve relevant documents and tags based on user inputs
 
 Weather API: Adjust plans according to raining conditions
 
-Planning system: To create plans based on the preferences of th user, 
+Planning system: Create plans based on usee preferences, 
 accounting for opening hours, user preferences, total trip duration and desired hours
 
 # Technologies
