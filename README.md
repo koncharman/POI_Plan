@@ -11,8 +11,9 @@ RAG: Retrieve relevant documents and tags based on user inputs
 
 Weather API: Adjust plans according to raining conditions
 
-Planning system: Create plans based on usee preferences, 
-accounting for opening hours, user preferences, total trip duration and desired hours
+Planning system: Create plans based on user preferences, 
+accounting for opening hours, user mentions of POIs or subjects, 
+total trip duration and desired trip hours
 
 # Technologies
 Streamlit for Application
