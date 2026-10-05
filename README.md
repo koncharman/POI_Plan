@@ -1,5 +1,18 @@
 # POI_Plan
-Plan a trip in Corfu based on a list of POIs and user instructions. The project uses RAG, vector databases, weather API and a planning system to find suitable POIs and create plans.
+Plan a trip in Corfu based on a list of POIs and user textual instructions. 
+
+The project uses:
+
+Entity extraction: Standard NLP techniques in combination with LLM assistance using prompts
+
+Vector databases (ChromaDB): Store information about POIs names and tags
+
+RAG: Retrieve relevant documents and tags based on user inputs
+
+Weather API: Adjust plans according to raining conditions
+
+Planning system: To create plans based on the preferences of th user, 
+accounting for opening hours, user preferences, total trip duration and desired hours
 
 # Technologies
 Streamlit for Application
