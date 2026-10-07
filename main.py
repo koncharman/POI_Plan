@@ -12,7 +12,10 @@ from datetime import time , date , timedelta
 import os
 from dotenv import load_dotenv
 
-
+OLLAMA_BASE_URL = os.getenv(
+    "OLLAMA_BASE_URL",
+    "http://localhost:11434"
+)
 
 @st.cache_resource
 def initialize_main_data():
@@ -54,10 +57,9 @@ def initialize_embeddings():
     if os.path.exists("./chroma_poi"):
         shutil.rmtree("./chroma_poi", ignore_errors=True)
 
-
     embeddings = OllamaEmbeddings(
         model="nomic-embed-text",
-        base_url="http://localhost:11434"
+        base_url=OLLAMA_BASE_URL
     )
 
     documents_poi, vector_store_poi = store_data_poi(poi_df, embeddings)
@@ -73,10 +75,13 @@ embeddings , documents_poi, vector_store_poi, tag_poi, vector_store_tag  = initi
 @st.cache_resource
 def initialize_structured_llm():
 
-    llm_base = ChatOllama(model="llama3.2:3b",  # qwen3:4b qwen3:8b  llama3.2:3b phi4-mini qwen2.5:3b deepseek-r1:7b
-                          temperature=0,
-                          reasoning=False,
-                          base_url="http://localhost:11434")
+
+    llm_base = ChatOllama(# qwen3:4b qwen3:8b  llama3.2:3b phi4-mini qwen2.5:3b deepseek-r1:7b
+        model="llama3.2:3b",
+        temperature=0,
+        reasoning=False,
+        base_url=OLLAMA_BASE_URL
+    )
 
     date_llm = llm_base.with_structured_output(DateInput)
     dure_llm = llm_base.with_structured_output(DurInput)

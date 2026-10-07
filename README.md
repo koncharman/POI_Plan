@@ -34,6 +34,77 @@ ollama pull llama3.2:3b
 ollama pull nomic-embed-text
 ```
 
+# Docker
+
+Docker Desktop must be installed and running.
+
+Ollama runs on the host machine, while the Streamlit application runs inside Docker.
+
+Make sure Ollama is accessible from Docker.
+
+On Windows, set the following environment variable:
+
+```bash
+OLLAMA_HOST=0.0.0.0:11434
+```
+
+Restart Ollama after setting the variable.
+
+Verify that Ollama is running:
+
+```bash
+curl http://localhost:11434/api/tags
+```
+
+Build the Docker image from the project directory:
+
+```bash
+docker build -t poiplan .
+```
+
+Run the application:
+
+```bash
+docker run --rm -p 8501:8501 poiplan
+```
+
+The application will be available at:
+
+```text
+http://localhost:8501
+```
+
+Inside Docker, the application connects to Ollama using:
+
+```text
+http://host.docker.internal:11434
+```
+
+The Docker image sets:
+
+```text
+OLLAMA_BASE_URL=http://host.docker.internal:11434
+```
+
+The Python application should read this value instead of using a hardcoded Ollama URL.
+
+Example:
+
+```python
+import os
+
+OLLAMA_BASE_URL = os.getenv(
+    "OLLAMA_BASE_URL",
+    "http://localhost:11434"
+)
+```
+
+To verify that Docker can communicate with Ollama:
+
+```bash
+docker run --rm --entrypoint curl poiplan http://host.docker.internal:11434/api/tags
+```
+
 # Application
 After installing the above requirements, you can run the streamlit application.
 ```bash
