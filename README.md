@@ -17,9 +17,17 @@ total trip duration and desired trip hours
 
 # Technologies
 Streamlit for Application
+
 ChromaDB for vector databases
+
 LangChain for embeddings and LLM integration
+
 OLLAMA models
+
+# Python
+Python 3.9.9
+
+Docker Version runs on python:3.9.25-slim-bookworm
 
 # Install Requirements
 ```bash
@@ -27,16 +35,22 @@ pip install -r requirements.txt
 ```
 
 # OLLAMA
-You need ollama to run the application
+You need to download ollama to run the application.
 Two models were used:
 ```bash
 ollama pull llama3.2:3b 
 ollama pull nomic-embed-text
 ```
 
+# Application
+After installing the above requirements, you can run the streamlit application.
+```bash
+streamlit run main.py
+```
+
 # Docker
 
-Docker Desktop must be installed and running.
+For the docker version, the Docker Desktop must be installed and running.
 
 Ollama runs on the host machine, while the Streamlit application runs inside Docker.
 
@@ -105,11 +119,7 @@ To verify that Docker can communicate with Ollama:
 docker run --rm --entrypoint curl poiplan http://host.docker.internal:11434/api/tags
 ```
 
-# Application
-After installing the above requirements, you can run the streamlit application.
-```bash
-streamlit run main.py
-```
+
 
 
 # Flow
